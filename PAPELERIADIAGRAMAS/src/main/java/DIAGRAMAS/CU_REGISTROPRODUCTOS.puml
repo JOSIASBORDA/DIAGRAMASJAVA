@@ -1,0 +1,9 @@
+@startuml
+left to right direction
+actor Administrador as Admin
+rectangle Sistema {
+  Admin --> (Ingresar detalles del producto) : [111]
+  (Ingresar detalles del producto) .. (Validar información del producto) :[1.1] <<include>> 
+  (Validar información del producto) -- (Agregar al inventario) :[1.2] <<include>> 
+}
+@enduml

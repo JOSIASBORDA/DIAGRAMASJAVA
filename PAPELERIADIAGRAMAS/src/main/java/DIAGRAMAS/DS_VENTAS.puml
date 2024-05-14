@@ -1,0 +1,18 @@
+@startuml
+actor Usuario as User
+participant Sistema
+User -> Sistema: Seleccionar producto
+activate Sistema
+Sistema -> Sistema: Verificar disponibilidad
+alt Producto disponible
+Sistema -> User: Solicitar cantidad
+User -> Sistema: Ingresar cantidad
+Sistema -> Sistema: Calcular total
+Sistema --> User: Mostrar total
+User -> Sistema: Confirmar venta
+Sistema -> Sistema: Actualizar inventario
+else Producto no disponible
+Sistema --> User: Mostrar mensaje de error
+end
+deactivate Sistema
+@enduml

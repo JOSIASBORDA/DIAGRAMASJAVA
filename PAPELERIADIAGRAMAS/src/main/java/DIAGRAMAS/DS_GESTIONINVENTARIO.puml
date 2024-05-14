@@ -1,0 +1,15 @@
+@startuml
+actor Administrador as Admin
+participant Sistema
+alt realizar acción
+Admin -> Sistema: Visualizar inventario
+Admin -> Sistema: Agregar producto
+Admin -> Sistema: Actualizar cantidad
+Admin -> Sistema: Eliminar producto
+else cancelar acción
+Admin -> Sistema: Cancelar solicitud
+end
+@enduml
+
+
+

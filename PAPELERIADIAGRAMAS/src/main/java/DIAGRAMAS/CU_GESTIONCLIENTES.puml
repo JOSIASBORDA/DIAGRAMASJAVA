@@ -1,0 +1,11 @@
+@startuml
+left to right direction
+actor Administrador as Admin
+rectangle Sistema {
+  Admin --> (Agregar cliente) : [101]
+  Admin --> (Actualizar información de contacto) : [102]
+  Admin --> (Visualizar historial de compras) : [113]
+  Admin --> (Eliminar cliente) : [104]
+}
+@enduml
+

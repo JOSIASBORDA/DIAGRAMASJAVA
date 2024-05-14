@@ -1,0 +1,11 @@
+@startuml
+left to right direction
+actor Usuario as usuario
+rectangle Sistema {
+  usuario --> (Ingresar credenciales) : [111]
+  (Ingresar credenciales) .. (Validar credenciales) : [1.1] <<include>> 
+  (Validar credenciales) -- (Acceder al sistema) :[1.2] <<include>> 
+}
+
+@enduml
+

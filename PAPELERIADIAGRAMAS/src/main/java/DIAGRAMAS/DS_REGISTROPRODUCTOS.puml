@@ -1,0 +1,17 @@
+@startuml
+actor Administrador as Admin
+participant Sistema
+alt Lanzar solicitud
+Admin -> Sistema: Ingresar detalles del producto
+else Rechazo solicitud
+Sistema -> Admin : Vuelva a intentarlo
+end
+activate Sistema
+Sistema -> Sistema: Validar información del producto
+alt Información válida
+Sistema --> Admin: Producto agregado al inventario
+else Información inválida
+Sistema --> Admin: Mostrar mensaje de error
+end
+deactivate Sistema
+@enduml

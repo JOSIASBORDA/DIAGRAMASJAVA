@@ -1,0 +1,13 @@
+@startuml
+actor Administrador as Admin
+participant Sistema
+alt realizar acci}ón
+Admin -> Sistema: Agregar cliente
+Admin -> Sistema: Actualizar información de contacto
+Admin -> Sistema: Visualizar historial de compras
+Admin -> Sistema: Eliminar cliente
+else cancelar acción
+Admin -> Sistema: Cancelar solicitud
+end
+@enduml
+
